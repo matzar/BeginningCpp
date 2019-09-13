@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/ -->
+<html class=" js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+    How to declare and initialize array in a class? - Question
+ | mbed</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"><script type="text/javascript" src="./How to declare and initialize array in a class_ - Question _ mbed_files/0c341c3bde"></script><script src="./How to declare and initialize array in a class_ - Question _ mbed_files/nr-892.min.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQQHVVBUGwQDUVJSBQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(14),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,-1!==o.indexOf("dev")&&(s.dev=!0),-1!==o.indexOf("nr_dev")&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f?f.apply(this,a(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(15),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7);t("loader").features.stn=!0,t(6);var c=NREUM.o.EV;o.on("fn-start",function(t,e){var n=t[0];n instanceof c&&(this.bstStart=Date.now())}),o.on("fn-end",function(t,e){var n=t[0];n instanceof c&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),s.on("fn-start",function(){this.bstStart=Date.now()}),s.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on("pushState-start",function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on("pushState-end",function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",r,!1),document.addEventListener("keypress",r,!1),document.addEventListener("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,["addEventListener","removeEventListener"],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(16)(a),c=t("gos");e.exports=a,o(window),"getPrototypeOf"in Object?(r(document),r(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&o(XMLHttpRequest.prototype),a.on("addEventListener-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(16)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(16)(r);e.exports=r,o.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(16)(i);e.exports=i,a.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),a.inPlace(window,["setInterval"],"setInterval-"),a.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),i.on("setInterval-start",r),i.on("setTimer-start",o)},{}],9:[function(t,e,n){function r(t,e){e=e||this;var n=a.context(e);e.readyState>3&&!n.resolved&&(n.resolved=!0,a.emit("xhr-resolved",[],e));try{f.inPlace(e,p,"fn-",o)}catch(r){}}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").get("xhr"),s=t(5),c=t(16),f=c(a),u=c(s),d=NREUM.o,l=d.XHR,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout","onreadystatechange"];e.exports=a,window.XMLHttpRequest=function(t){var e=new l(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",r,!1)}catch(n){try{a.emit("internal-error",[n])}catch(i){}}return e},i(l,XMLHttpRequest),XMLHttpRequest.prototype=l.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;l>r;r++)t.removeEventListener(d[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return i(r)}function i(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}function a(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(11),u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(13),m=window.XMLHttpRequest;s.features.xhr=!0,t(5),t(9),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||10>h)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},a(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var a=i(r);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;l>s;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(t,e){return function(){o(t,[(new Date).getTime()].concat(a(arguments)),null,e)}}var o=t("handle"),i=t(14),a=t(15);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var s=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(s,function(t,e){newrelic[e]=r(f+e,"api")}),i(c,function(t,e){newrelic[e]=r(f+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),o("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],14:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],15:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],16:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(15),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);var u=f[v[n]];return u&&u.push([w,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",v[n]=e,e in f||(f[e]=[])})}var m={},v={},w={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return w}function i(){return new r}var a="nr@context",s=t("gos"),c=t(14),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!m++){var t=h.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(l,function(e,n){t[e]||(t[e]=n)});var n="https"===d.split(":")[0]||t.sslForHttp;h.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=h.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(14),f=window,u=f.document;NREUM.o={ST:setTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var d=(""+location).split("?")[0],l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-892.min.js"},p=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),h=e.exports={offset:a(),origin:d,features:{},xhrWrappable:p};u.addEventListener?(u.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(u.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),s("mark",["firstbyte",a()],null,"api");var m=0},{}]},{},["loader",2,10,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":1,"licenseKey":"0c341c3bde","agent":"","transactionName":"Z11UMERTXUUEWhYLXV4XcBFYUUdfCldND1BVXBgVQ1dAQgxWDBEcRlFTE0UIYkMAShYLXV5uXwFBHFRTEQ==","applicationID":"735302,5266396","errorBeacon":"bam.nr-data.net","applicationTime":424}</script>
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=0.9">
+
+
+    <!-- Included CSS Files -->
+    <link type="text/css" href="./How to declare and initialize array in a class_ - Question _ mbed_files/A.css,,_app.css+css,,_mbed.css+css,,_questions.css+css,,_responsive-tables.css+webfonts,,_ss-stand.css" rel="stylesheet">
+    
+    <script src="./How to declare and initialize array in a class_ - Question _ mbed_files/modernizr.foundation.js.pagespeed.jm.fHFG8H195u.js"></script>
+<script src="./How to declare and initialize array in a class_ - Question _ mbed_files/jquery.js.pagespeed.jm.qG3eX37gsb.js"></script>
+<script src="./How to declare and initialize array in a class_ - Question _ mbed_files/date.js+mbedcom.js+jquery.timeago.js+jquery.cycle.all.latest.js.pagespeed.jc.3bJUGWaPTu.js"></script><script>eval(mod_pagespeed_Ofw5$xybCR);</script>
+<script>eval(mod_pagespeed_WKG7Pme_wq);</script>
+<script>eval(mod_pagespeed_5dtSPSSlBV);</script>
+<script>eval(mod_pagespeed_sgzDt0TR$s);</script>
+<script src="./How to declare and initialize array in a class_ - Question _ mbed_files/json2.js+foundation,_jquery.event.move.js+foundation,_jquery.event.swipe.js+foundation,_jquery.foun.js"></script><script>eval(mod_pagespeed_SZ_1k$2DaU);</script>
+<script>eval(mod_pagespeed_dLrHXePpSz);</script>
+<script>eval(mod_pagespeed_i2SP3Stp1X);</script>
+<script>eval(mod_pagespeed_567YJB4z3s);</script>
+<script>eval(mod_pagespeed_UxfahZVCG4);</script>
+<script>eval(mod_pagespeed_AYmLeGe3xm);</script>
+<script>eval(mod_pagespeed_a2gdlseRvJ);</script>
+<script>eval(mod_pagespeed_pHsAO6E8d4);</script>
+<script>eval(mod_pagespeed_zuece6P4An);</script>
+<script>eval(mod_pagespeed_dAoq3OW7vY);</script>
+<script>eval(mod_pagespeed_WznPWbuyz_);</script>
+<script>eval(mod_pagespeed_9AuvBNBptM);</script>
+<script>eval(mod_pagespeed__yzEbVRriU);</script>
+<script src="./How to declare and initialize array in a class_ - Question _ mbed_files/webfonts,_ss-standard.js+webfonts,_ss-social.js+js,_foundation,_app.js.pagespeed.jc.9Vx21zQEIr.js"></script><script>eval(mod_pagespeed_yHz83s_fwC);</script>
+<script>eval(mod_pagespeed_p5p2wzu3Cx);</script>
+<script>eval(mod_pagespeed_fBYX5Lh9yl);</script>
+    <!--[if (gte IE 6)&(lte IE 8)]>
+        <script type="text/javascript" src="/static/js/selectivizr-min.js"></script>
+  <![endif]-->
+
+    
+    
+    
+
+
+
+
+    <script language="javascript" type="text/javascript" src="./How to declare and initialize array in a class_ - Question _ mbed_files/AddFileBrowser.js"></script>
+<script src="./How to declare and initialize array in a class_ - Question _ mbed_files/questions.js+flag.js.pagespeed.jc.ZcaOuNSMf5.js"></script><script>eval(mod_pagespeed_opqkCJZSU5);</script>
+<script>eval(mod_pagespeed_QBayzuVGxt);</script>
+
+    <style type="text/css">#id_comment{border:1px solid #ccc;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);box-shadow:inset 0 1px 2px rgba(0,0,0,.1);color:rgba(0,0,0,.75);display:block;font-size:14px;margin:0 0 12px 0;padding:6px;height:32px;width:100%;-webkit-transition:all .15s linear;-moz-transition:all .15s linear;-o-transition:all .15s linear;transition:all .15s linear}#id_comment:focus{background:#fafafa;outline:none!important;border-color:#b3b3b3}</style>
+
+
+</head>
+<body>
+
+<div class="row nav-wrapper ">
+        <div class="twelve columns navigation">
+        
+            <ul class="nav-bar radius" id="nav">
+                <li><a href="https://developer.mbed.org/"><script pagespeed_no_defer="">//<![CDATA[
+(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/','B6nXayd9mu',true,false,'M3S44R3ylE0');
+//]]></script><img height="16" width="16" class="icon icon_house" src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAABAAEAAAICVAEAOw==" pagespeed_url_hash="3154373828" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                <li><a href="https://developer.mbed.org/platforms/">Platforms</a></li>
+                <li><a href="https://developer.mbed.org/components/">Components</a></li>   
+                <li><a href="https://developer.mbed.org/handbook/">Handbook</a></li>
+                <li><a href="https://developer.mbed.org/cookbook/">Cookbook</a></li>
+                <li><a href="https://developer.mbed.org/code/">Code</a></li>
+                <li class="active"><a href="https://developer.mbed.org/questions/">Questions</a></li>
+                <li><a href="https://developer.mbed.org/forum/">Forum</a></li>
+                <li class="user-links"><a href="https://developer.mbed.org/compiler/" target="compiler">Compiler</a></li>
+                <li class="user-links"><a class="dashboard-link" href="https://developer.mbed.org/dashboard/">Dashboard</a></li>
+
+            </ul>
+        
+        </div>
+    </div>
+
+    <div class="row" id="top">
+        <div class="three columns logo mobile-two">
+            <h1><a href="https://www.mbed.org/"><img src="./How to declare and initialize array in a class_ - Question _ mbed_files/xarmmbed.png.pagespeed.ic.qebrTYOtUg.png" alt="ARM mbed" pagespeed_url_hash="1531830657" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></h1>
+        </div>
+        <div class="three columns header login-block push-six mobile-two">
+         
+            
+            <p class="logged-out">
+                <a class="button radius success" href="https://developer.mbed.org/account/login/?next=/questions/2495/How-to-declare-and-initialize-array-in-a/">
+                    <img alt="Login" height="16" width="16" class="icon icon_login" src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAABAAEAAAICVAEAOw==" pagespeed_url_hash="3154373828" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    Login
+                    <span class="hide-for-small">or signup</span>
+                </a>
+            </p>
+            
+        
+        </div>
+
+        <div class="six columns header pull-three search-block">
+             
+            <form id="search" action="https://developer.mbed.org/search/" method="GET">
+            <input type="hidden" name="type" value="">
+                <div class="row">
+                    <div class="ten mobile-three columns">
+                        <input type="search" name="q" id="id_q" placeholder="Search developer.mbed.org..." class="search-input">
+                    </div>
+                    <div class="two mobile-one columns">
+                        <input type="submit" value="Go" class="button radius  ">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div><!-- end of #top -->
+    
+    <div id="breadcrumbs" class="row">
+        <div class="twelve columns" style="position: relative;">
+            <div class="breadcrumbs">
+                
+
+
+<a href="https://developer.mbed.org/questions">Questions</a>
+
+
+    » How to declare and initialize array in a class?
+
+
+            </div>
+            
+            <div class="breadcrumbs breadcrumbs-right">
+                
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+    <div class="row">
+        <div class="nine columns main-content" id="mbed-content">
+            
+        
+            
+    
+    
+        
+            <div class="q-inner">
+                <div class="q-content">
+                    <div class="q-dialog row">
+                        <div class="two columns">
+                            <a href="https://developer.mbed.org/users/Behaegel/">
+                                
+                                <img src="data:image/webp;base64,UklGRsQCAABXRUJQVlA4ILgCAADwDACdASofACgAPmkqkUWkIqGarAQAQAaEtgBOmUI70kCVLhbcECqbuAA/W7rS/Iro/mPH/mPapsn8ZJ2meQDmgeNb6Y9gD9UutEJ3oz+Ixruw3MEC9r661lekJm/92C8aJ/MrMhOWXq4kafysnL8AAP79MA+ukCx9660x9/cl2OximwWrjgv/sEvH9pBQyD7ngYPi74vwAtn2uSfYWOWF8nvYoYN22YdPsLn08ataVbAycmYdkkZc4eAJd2F7b6njpqOUBE16bBCd/dCjRy2ee7/bxt6ZXvmYU6WnBzd58OsL+PEurtbBVI/XHvQ/B3HZkIpDsG+3CkNBc4boo6rrVc5DI/E+T7ssqqxN+r6opmy0zvBjPV8sYkMn3jxltyUNfygi+T8+VB5wB+7HM0bOYEoXyRE2m3nXN5gbDSwX279Vb9HBvTbkgwy5Y3E5JdUIV8iLSoiGFbzqmn44N+fC0yZTkV+y/Qskan80/cTznz6j3+is+X59EJIea/nVU15DLIJR1mImUlE4l9LULkDklbRX8f5AXHUkXJsFt0F/n+PxKMhfS2tI9I7/lPBeFTNBGPaYuhM9B7dSJz8JPsARDN9bYC30n5ngbOPBj3P/S5XV6am997vb67OGtOKS+Q+bFjTJbcZAq94lsqdMHjhKk5AnqhcAC3SkCaCFNMiyE8GZSM5m7z4YSQ5PRafSO0IlsvQjAW1uL44/MDmgUR/+q/Ymrrn0l95W3KcTyT0cyoe+Nan8fWfFah7/+9BcZsZ7s/KvXzz+tdgbfOd/jg4ObAf/lZ/9WLfhytT9n/74SUH4R44o0Mgm6sCil1EVwdPXg66d/7//7R5J/ZkKNdf94az//mn/fP9/5j7VfWlMMHCMIcP2z/1kZ605uSjnUugfqrVFWxqL45f75MKM8r9oDVCAOrSgAAA=" pagespeed_url_hash="2643054444" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            </a>
+                            <h5><span class="authortext"><a href="https://developer.mbed.org/users/Behaegel/">Jeroen Behaegel</a></span></h5>
+                            
+
+
+                        </div>
+
+                        <div class="ten columns editcontentitem">
+                            <span class="edit-links">
+                                
+                                <a href="https://developer.mbed.org/flag/153/2495/" class="btn-flag-content button secondary small radius">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAnpJREFUeNqkk11IU2EYx//v2RdHT35szWgrWHQ3i2RjXWVQixyTuomIXEkQmXnRlTd9qNgsIiKim3KGOWhEQVaUMTJMUxCqBRWJCTIIMSqZW9vc/NhOzyvHOgijiw78znvO+7z//3ne5zkvk2UZ/3NpPwoCjPSwYqO2o2c9DbU5oD4OlIpAexYYytDkEpHiBgWMGVGdB44UV1VtM9bU2G1FRdLr1taSEsaaKTb4Z+EHxlZnsIWo19tsLqPXu1UWRVNiagrJ2VmYzWZ8CoWGyT1LGbAk8FltYCWOCmbzLqPHY9dZrRt+TU8jMTODdCKBpWwWAm13XUUFjCYT+oLBkTRwgW+hhISHUFxcW+Z229e4XJsXEwnh29gYUvE45jMZMCq0wWCAKIowk8GD7u7ROaCDxP3sFdBJRXLmlMJwFgl3XZ0zOjEBnU63LOSst1gQ7Op6Q4Vs0wBhXmFugJyCysBDY8c+n88Zi8VQVl4OSZLQFQi8o1gL1SDMU+cGQoEuhInzvaFQZE6rXRZ3BgIRMm1RYn//A/XLQqUAySVAw5aL+oNK/VbyOJy3fe0Rbrha/Jjga5E2MSzsEaC3MIg6BmqMg8QnqpuuNz66eeZZchP8+kn0r7T6OXGNGOcZ9NDNawL2K8G8DEdmEcd3NFxpvHfp9JPUgnyD5gZ4rE+h4BaW8tj+PSkf23vSf+ru5eb72Zx8izIc7J8EXhQ6Cyrxzp/pfMOBpjZfz9VzvfTVzoEoBl9O/vuwUUtRetGNgejDs7J/N4YOVuIwzVUQtDmU8zghEXSeYCB0io5plCzWagXMz44Pbxz5ijtPv+C9avGKQKu0nakOrvxbgAEACx7bndS0NGMAAAAASUVORK5CYII=" pagespeed_url_hash="1590061982" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                    Report
+                                </a>
+                                
+                            </span>
+
+                            <h5>
+                                <span class="quiet"><abbr title="Feb. 7, 2014, 6:34 p.m.">2&nbsp;years, 1&nbsp;month ago.</abbr></span>
+                                
+                            </h5>
+
+                            <h2>How to declare and initialize array in a class?</h2>
+
+                            <p>I'm having a problem with a program I'm writing for the mbed.
+I'm trying to create a class that contains an (const) array that contains integers.
+The declaration of the array happens in the .h file:</p>
+<div class="flashbox fcode"><h4 class="ftitle">declaring array in h</h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br></div></td><td class="codify_screen"><pre><span class="SH_BUILTIN">#ifndef&nbsp;TEST_H</span>
+<span class="SH_BUILTIN">#define&nbsp;TEST_H</span>
+&nbsp;
+<span class="SH_RESERVED">class</span>&nbsp;test
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">public</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">private</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">int</span>*&nbsp;tones_freq[];&nbsp;<span class="SH_COMMENT">//If&nbsp;possible,&nbsp;declare&nbsp;as&nbsp;const?</span>
+};
+<span class="SH_BUILTIN">#endif</span>
+</pre></td></tr></tbody></table></pre></div><p>Next, the array is being initialized in the constructor of the class inside the .cpp file:</p>
+<div class="flashbox fcode"><h4 class="ftitle">initialize array in cpp</h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></div></td><td class="codify_screen"><pre><span class="SH_BUILTIN">#include&nbsp;</span><span class="SH_STRING">"test.h"</span>
+<span class="SH_BUILTIN">#include&nbsp;</span><span class="SH_STRING">"mbed.h"</span>
+&nbsp;
+test::test()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;*<span class="SH_RESERVED">this</span>-&gt;tones_freq&nbsp;{<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">510</span>,<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">770</span>,<span class="SH_BUILTIN">380</span>,<span class="SH_BUILTIN">510</span>,<span class="SH_BUILTIN">380</span>,<span class="SH_BUILTIN">320</span>,<span class="SH_BUILTIN">440</span>,<span class="SH_BUILTIN">480</span>,<span class="SH_BUILTIN">450</span>,<span class="SH_BUILTIN">430</span>,<span class="SH_BUILTIN">380</span>};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_COMMENT">//*this-&gt;tones_freq&nbsp;=&nbsp;{660,660,660,510,660,770,380,510,380,320,440,480,450,430,380};</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_COMMENT">//*this-&gt;tones_freq[]&nbsp;=&nbsp;{660,660,660,510,660,770,380,510,380,320,440,480,450,430,380};</span>
+}
+</pre></td></tr></tbody></table></pre></div><p>The code above all give errors (E.g. "<strong>Expection a ';'</strong>", "<strong>Expected an expression...</strong>", ...)
+When I try to declare the array as const inside the header and initialize it there, I get an error that initialization is not allowed there. 
+What I am doing wrong in this simple code?</p>
+
+
+                            
+
+                            <div class="comment-container">
+                                
+
+                                
+
+                                
+                                    <a class="q-showcomment" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/#" id="2495">Comment on this question</a>
+                                
+
+                                <div id="q_2495" style="display:none;">
+                                    
+                                        <p>Please <a href="https://developer.mbed.org/account/login/?next=/questions/2495/How-to-declare-and-initialize-array-in-a/">login</a> to post comments.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: -1em;">
+                        
+                            <h2>
+                                
+                                    4 Answers
+                                
+                            </h2>
+                        
+
+                        <dl class="sub-nav">
+                            <dt>Sort by:</dt>
+                            <dd class="active">
+                                <a title="Answers with the most votes first" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/?sort=">Votes</a>
+                            </dd>
+                            <dd>
+                                <a title="Anwers with the latest activity first" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/?sort=date">Active</a>
+                            </dd>
+                            <dd>
+                                <a title="Anwers in the order they were posted" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/?sort=created">Newest</a>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    
+                        <div class="row q-dialog answer accepted" id="answer3047">
+                            <div class="two columns">
+                                <a href="https://developer.mbed.org/users/Sissors/">
+                                    
+                                        <img src="data:image/webp;base64,UklGRqICAABXRUJQVlA4IJYCAACwDACdASooACgAPm02lEekIyIhJzgKSIANiWYAzic5zE5gQaWWHd5hlt2P//ieG00UqzUb3J9+nvYI/WL/hdgxTV9RmscT3/axch11bOWx9yu1PXd79Ttp9JeTtBrjNHGz9RD79mXBWY8NvaqEAAD+/11jgxL97QPXgrxX3csvPVUZ0KEcqNbjlZFNDlPIf+b9SzzvhPx2vh/24P/EiD//enH3Alx7+b8m2V/gv61P7/Vfl4+PH5lAmv4Er3K+koZpUQpQUEh0EbEWV+Yq2gFnHeYiwYjaObyO6m23lxkP8+/1MdfanuqDjIjnVK6EvslLJAvSh0DjPu59FnQZcbotNq0Wbxo8JHA63/S3Evmh+KCTQ34b72GbGjHLm+QRzbxHZWqexFQjXQOR7s7AF5puWvc+SxbN+4PQkZfH5/XMZT1hoAkXMMyq+39622fBJcgpwM5N1j8kbfv694UVqf6ZHKF0YxTpWL3r/0YMBSvn+sjLpJJEZvtJ/Tf//ITe3uAf1EK+F/FiCBA0IG9bluerpM0qaA69idz9LkWsZNAAQBN0rfP+h3v6ncq9CztCosH0i69L5fPCt/J1AnlU8mk8LiflxSPzujlLv39KTALeaUJ0L3gIZR47Ym5bxjp2alCYLld3N60Whbw6kCmT7zdJb/xZudDMBTUse6FUqrrWi29+T/L3+0yTHQuAusnUZKIyfGM+Ax/AqCgZpoeWgAjWEgLsOrmZmcAUqCBWF7ypYzf/ZjnHdi/YOcwQ+pee2O0pfhUfoBUYudSUIuXWQ2V9Sjstt7ZvnO5WOQNpE8LRsXoxx+DPvfpTxG6Sh/dhBoCkFDDAhSdLrNEpSX8L+C6SbaSNodE41xA4FPT0jTHaVuA0AAAAAA==" pagespeed_url_hash="3235799122" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </a>
+                                <h5><span class="authortext"><a href="https://developer.mbed.org/users/Sissors/">Erik Olieman</a></span></h5>
+                                
+
+
+                                
+                            </div>
+
+                            <div class="ten columns editcontentitem">
+                                <h5>
+                                    <span class="quiet">
+                                        <abbr title="Feb. 7, 2014, 8:57 p.m.">2&nbsp;years, 1&nbsp;month ago.</abbr>
+                                    </span>
+                                    
+                                </h5>
+                                <p></p><p>If it is a const anyway, you might as well make it a static member variable. And then it really is part of your class, only difference with regular variable is that between all objects made of the class, it only exists once. Which isn't an issue since it is a const anyway. See for explanation: <a href="http://www.learncpp.com/cpp-tutorial/811-static-member-variables/" rel="nofollow">http://www.learncpp.com/cpp-tutorial/811-static-member-variables/</a>. Then you can define it in your .h file, while the actual initialization happens in the .cpp.</p>
+<p></p>
+                                <div class="answer-actions">
+                                    <a class="a-showcomment" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/#" id="3047">Post a comment on this answer</a>
+                                    
+                                        <span class="q-label q-label-undo accept" title="The question owner accepted this answer 2 years, 1 month ago.">Accepted Answer</span>
+                                    
+                                </div>
+                                <div class="comment-container">
+                                    
+                                    
+                                    <div id="a_3047" style="display:none;">
+                                        
+                                            <p>Please <a href="https://developer.mbed.org/account/login/?next=/questions/2495/How-to-declare-and-initialize-array-in-a/%23answer3047">login</a> to post comments.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row q-dialog answer " id="answer3043">
+                            <div class="two columns">
+                                <a href="https://developer.mbed.org/users/wim/">
+                                    
+                                        <img src="data:image/webp;base64,UklGRhYDAABXRUJQVlA4IAoDAADwDwCdASooAB4APmkqkUWkIqGYBVRABoS2AFYZZd8YkN8V7nAA2yP7AeZn6QH6Ae4D9AOAz9AD9gPS7/ZX4fv2Z9ICsNcm/qOPmcB9KYwOx2MCkgv4rwvIzvQS/2f7j6J/pv0WBX7t+Kd/9FyGrIrK4y4aANCs5y3GG33iPLmA8PjxVPj2lArAAP3MSLMMOpEyYifbE3Gp9JTW+QMJ8RPAE4njeGfTGYftAZEE2f+se8+/3u1k/iVWpqu+SI+hfhvkA7zjcztEjU1PjJk2f1B8hFwaYodURNlEBP0m1U9otCPCbo+NVxSys3DdmivY3gTzcgecua/lwstv8IGw/TAwAVMct1xJWouygD1EeL+Xl/R0HIheK0qu3Rb/ifvE33jaopTDLAce4TcjABxcleWYi75aM7Zz5fxLl0l/m+KHhHQKFWZFM+reckH5N4R5M+TdFUWvrBEct09uuoHPoQUFBwlFWGZOdtM+yxcjRKFX3NYxCbtIlHT8njgBfP/9QGlXWWVm6e3+8ebkIABWGqT/0a5J1lla8b4wm5/SY9qMtmKxDKUHvalXzdbeUuX0e5I90EEM8OUv/jkAprvaZr82Je51xfjtGN9oZzy9MPrOiDYM6ahD4iRRY6DCC7/E3YXLRorHhx0UoPWXZb0BIItNOvtF0CVf56qH3v6XPGkP1jYw0ndiMM0kepc5//QZ782hHHW3/sv8odJHjtytG7nKTKqV7YTsQXGJrSc/waDpygcgfcKdFcPNXvj86UCceMUhM4voYN88lL6Mz0xHP5HsWa1n2IokjE0KI+j6UgkZIuQRfKIk+Z598oigd4G0zaDPzQOTp4ntZrdIwnjy/c9OXMY5b00xBJ5Amy64EgqKb9jwPYqeuS/8PgtQrZL2EQPzV+NmBg0+ZIjwBH38pcGctD8/lVQPd3vSCLUH6SNVlJQv+6dU5/6WD/IH1omDp5xQg6s3053ccFywapypIrHgt71cf+D9uG8GppykplnNcGSYWtOSA3uXt3AYui/dJNJGxVDxqBzeAAAA" pagespeed_url_hash="2321034902" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </a>
+                                <h5><span class="authortext"><a href="https://developer.mbed.org/users/wim/">Wim Huiskamp</a></span></h5>
+                                
+
+
+                                
+                            </div>
+
+                            <div class="ten columns editcontentitem">
+                                <h5>
+                                    <span class="quiet">
+                                        <abbr title="Feb. 7, 2014, 7:14 p.m.">2&nbsp;years, 1&nbsp;month ago.</abbr>
+                                    </span>
+                                    
+                                </h5>
+                                <p></p><p>You are not allowed to initialise an array like that. You can use the following declaration:</p>
+<div class="flashbox fcode"><h4 class="ftitle"> </h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br></div></td><td class="codify_screen"><pre>&nbsp;&nbsp;<span class="SH_RESERVED">int</span>&nbsp;tones_freq[]&nbsp;=&nbsp;{<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">510</span>,<span class="SH_BUILTIN">660</span>,<span class="SH_BUILTIN">770</span>,<span class="SH_BUILTIN">380</span>,<span class="SH_BUILTIN">510</span>,<span class="SH_BUILTIN">380</span>,<span class="SH_BUILTIN">320</span>,<span class="SH_BUILTIN">440</span>,<span class="SH_BUILTIN">480</span>,<span class="SH_BUILTIN">450</span>,<span class="SH_BUILTIN">430</span>,<span class="SH_BUILTIN">380</span>};&nbsp;
+</pre></td></tr></tbody></table></pre></div><p>When you want to populate the array later on then you need to define the array size at declaration time and later on use a loop to fill each individual element (or use some memcopy operation).</p>
+<div class="flashbox fcode"><h4 class="ftitle"> </h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br>2<br>3<br>4<br>5<br></div></td><td class="codify_screen"><pre><span class="SH_RESERVED">int</span>&nbsp;tones_freq[<span class="SH_BUILTIN">15</span>];
+&nbsp;
+tones_freq[<span class="SH_BUILTIN">0</span>]=&nbsp;<span class="SH_BUILTIN">660</span>;
+...
+tones_freq[<span class="SH_BUILTIN">14</span>]=&nbsp;<span class="SH_BUILTIN">380</span>;
+</pre></td></tr></tbody></table></pre></div><p>Note that you also use</p>
+<div class="flashbox fcode"><h4 class="ftitle"> </h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br></div></td><td class="codify_screen"><pre><span class="SH_RESERVED">int</span>*&nbsp;tones_freq[];
+</pre></td></tr></tbody></table></pre></div><p>That would mean you try to declare an array of pointers to int. Is that really what you want to do?</p>
+<p></p>
+                                <div class="answer-actions">
+                                    <a class="a-showcomment" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/#" id="3043">Post a comment on this answer</a>
+                                    
+                                </div>
+                                <div class="comment-container">
+                                    
+                                    
+                                    <div id="a_3043" style="display:none;">
+                                        
+                                            <p>Please <a href="https://developer.mbed.org/account/login/?next=/questions/2495/How-to-declare-and-initialize-array-in-a/%23answer3043">login</a> to post comments.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row q-dialog answer " id="answer3045">
+                            <div class="two columns">
+                                <a href="https://developer.mbed.org/users/davidsr9/">
+                                    
+                                        <img src="data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAADQBgCdASooACYAPmEmjkWkIiEcbbQAQAYEtIAGFJWio9EEfMd3YrzNUPKdycPFeyZrvLhcYkslVBVwsjbIBBAA/v6UM8RJCnqRD+Q0iO/X9+C+QsfADUWBL9i1PryD7w9VG6PgwFkRRdPtP+KIRWKVJsVaunU0ccggjEpb9zFLyBmezsahqMI9+ISIhCLbqnLlNFOJD991uIFG21sryGckShCXq+J7x3MJFhtzhjhsIIJyQVHWy6uxKMvg5UcVmmFlExEcfcFveZifQyhdl98ZVe7+leQAAAA=" pagespeed_url_hash="2342981558" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </a>
+                                <h5><span class="authortext"><a href="https://developer.mbed.org/users/davidsr9/">David G</a></span></h5>
+                                
+
+
+                                
+                            </div>
+
+                            <div class="ten columns editcontentitem">
+                                <h5>
+                                    <span class="quiet">
+                                        <abbr title="Feb. 7, 2014, 8:27 p.m.">2&nbsp;years, 1&nbsp;month ago.</abbr>
+                                    </span>
+                                    
+                                </h5>
+                                <p></p><p>I've run into the same problem with C++. Unfortunately, C++ doesn't allow initializers like that. That being said, it is something that would be very useful in an embedded application. I'm not sure why there isn't a better mechanism for doing this.</p>
+<p>Here is an simple example of how I resolved the problem:</p>
+<div class="flashbox fcode"><h4 class="ftitle"> </h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br></div></td><td class="codify_screen"><pre><span class="SH_COMMENT">//&nbsp;Make&nbsp;the&nbsp;array&nbsp;of&nbsp;const&nbsp;int's&nbsp;and&nbsp;limit&nbsp;the&nbsp;scope&nbsp;to&nbsp;file&nbsp;scope.</span>
+<span class="SH_BUILTIN">#define&nbsp;SIZE_LIST&nbsp;3</span>
+<span class="SH_RESERVED">static</span>&nbsp;<span class="SH_RESERVED">const</span>&nbsp;<span class="SH_RESERVED">int</span>&nbsp;baseList[SIZE_LIST]&nbsp;=&nbsp;{<span class="SH_BUILTIN">1</span>,&nbsp;<span class="SH_BUILTIN">2</span>,&nbsp;<span class="SH_BUILTIN">3</span>};
+&nbsp;
+<span class="SH_RESERVED">class</span>&nbsp;Test&nbsp;{
+<span class="SH_RESERVED">private</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">const</span>&nbsp;<span class="SH_RESERVED">int</span>&nbsp;*list;&nbsp;<span class="SH_COMMENT">//&nbsp;This&nbsp;pointer&nbsp;to&nbsp;const&nbsp;must&nbsp;be&nbsp;initialized&nbsp;by&nbsp;the&nbsp;constructor.</span>
+&nbsp;
+<span class="SH_RESERVED">public</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;Test()&nbsp;{&nbsp;<span class="SH_COMMENT">//&nbsp;Very&nbsp;simple&nbsp;constructor.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;=&nbsp;baseList;
+&nbsp;&nbsp;&nbsp;&nbsp;};
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_COMMENT">//&nbsp;Some&nbsp;public&nbsp;member&nbsp;functions&nbsp;for&nbsp;accessing&nbsp;the&nbsp;array.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">int</span>&nbsp;size();
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">int</span>&nbsp;getListElement(<span class="SH_RESERVED">int</span>&nbsp;<span class="SH_STRMATH">index</span>);
+};
+&nbsp;
+<span class="SH_RESERVED">int</span>&nbsp;Test::size()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">return</span>(&nbsp;SIZE_LIST&nbsp;);
+}
+&nbsp;
+<span class="SH_RESERVED">int</span>&nbsp;Test::getListElement(<span class="SH_RESERVED">int</span>&nbsp;<span class="SH_STRMATH">index</span>)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">if</span>(&nbsp;<span class="SH_STRMATH">index</span>&nbsp;&gt;=&nbsp;<span class="SH_BUILTIN">0</span>&nbsp;&amp;&amp;&nbsp;<span class="SH_STRMATH">index</span>&nbsp;&lt;&nbsp;size()&nbsp;)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">return</span>(&nbsp;list[<span class="SH_STRMATH">index</span>]&nbsp;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">else</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">return</span>(&nbsp;<span class="SH_BUILTIN">NULL</span>&nbsp;);
+}
+</pre></td></tr></tbody></table></pre></div><p></p>
+                                <div class="answer-actions">
+                                    <a class="a-showcomment" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/#" id="3045">Post a comment on this answer</a>
+                                    
+                                </div>
+                                <div class="comment-container">
+                                    
+                                    
+                                    <div id="a_3045" style="display:none;">
+                                        
+                                            <p>Please <a href="https://developer.mbed.org/account/login/?next=/questions/2495/How-to-declare-and-initialize-array-in-a/%23answer3045">login</a> to post comments.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row q-dialog answer " id="answer3046">
+                            <div class="two columns">
+                                <a href="https://developer.mbed.org/users/Fuzball/">
+                                    
+                                        <img src="data:image/webp;base64,UklGRggCAABXRUJQVlA4IPwBAABwCACdASooABsAPm0wk0akIyGhKqoAgA2JYgCzqLwjI+VkoB9HOeaZyMDX6uVaXpIIgCzuax3YxSUkG68PznOEy95ClZzkGtxn75kAAP71n7eSgl8QJ3eJade5GUcI3u7CMf+r+2Mw8jcbab2Giv4qXjcfKt85bM1miTdF2fy4kei3yTaqJpX8tEUtev7XvIIwg/k793AT5GVqnFHsgG1qC6HmuY/nLfQGDxl+DvveEgYUzDQj8/T0nEvuMdVvvsDCqj2aZl4lfPK9o0ot1fKUrCQF6ojFXflV4flUYjoYfmqF4xlw+HL+zYXWt1vNP4qzPWZi8snkBTKx9Z9J4NVPU7/VWrpNp25leSTeHX9T0q+iA65g/hH8Vrfx5JR11J/fQxVu2RAXd91G5SE74xPTo3KE9dlGAr5RutOhxz4m9Gd4u2IlZw+8jKu/jzfDOistt+sHVFr1Xfn+h4AsVniXI9xHmyxMjgr12bwKVICHKft/mK9q2cz05BtKEQj8o2dR1hS0NpAxqWKeLeinxuRm2/rR9bOvOEwndx+IrxIAXmfVwf7aYycc9G066tjqAJg9Q2xAx/CA6cFHlxwtLayHCCu8d3U3A7DBP1/Pm8ljGF9A2/6IhgDbjGpWwFMpuTWfIVXpWDYfr4b8viH8WpTIzKWCl1VIHw+g2doA" pagespeed_url_hash="1782381706" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </a>
+                                <h5><span class="authortext"><a href="https://developer.mbed.org/users/Fuzball/">Chris Yan</a></span></h5>
+                                
+
+
+                                
+                            </div>
+
+                            <div class="ten columns editcontentitem">
+                                <h5>
+                                    <span class="quiet">
+                                        <abbr title="Feb. 7, 2014, 8:45 p.m.">2&nbsp;years, 1&nbsp;month ago.</abbr>
+                                    </span>
+                                    
+                                </h5>
+                                <p></p><p>Hi Jeroen,</p>
+<p>You're code isn't too far from being correct - it just looks like you're used to managed code. The mbed compiler uses unmanaged code, so memory and garbage collection is left to you :)</p>
+<p><strong>You would want to use a pointer to an array of ints for class-member arrays, which is close to what you're already doing here...</strong></p>
+<div class="flashbox fcode"><h4 class="ftitle"> </h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br></div></td><td class="codify_screen"><pre><span class="SH_RESERVED">class</span>&nbsp;test
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">public</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;init_array(<span class="SH_RESERVED">int</span>&nbsp;array_size);
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">private</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">int</span>*&nbsp;tones_freq;&nbsp;<span class="SH_COMMENT">//&nbsp;Take&nbsp;off&nbsp;the&nbsp;[]&nbsp;brackets</span>
+};
+&nbsp;
+...
+&nbsp;
+test::test()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;tones_freq&nbsp;=&nbsp;<span class="SH_BUILTIN">0</span>;&nbsp;<span class="SH_COMMENT">//&nbsp;Start&nbsp;out&nbsp;with&nbsp;the&nbsp;pointer&nbsp;as&nbsp;null</span>
+}
+&nbsp;
+test::init_array(<span class="SH_RESERVED">int</span>&nbsp;array_size)&nbsp;<span class="SH_COMMENT">//&nbsp;Once&nbsp;needed,&nbsp;reserve&nbsp;the&nbsp;memory&nbsp;needed&nbsp;for&nbsp;your&nbsp;array</span>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;tones_freq&nbsp;=&nbsp;<span class="SH_RESERVED">new</span>&nbsp;<span class="SH_RESERVED">int</span>[&nbsp;array_size&nbsp;];&nbsp;<span class="SH_COMMENT">//&nbsp;The&nbsp;previously&nbsp;undefined&nbsp;pointer&nbsp;now&nbsp;points&nbsp;to&nbsp;an&nbsp;array&nbsp;of&nbsp;ints</span>
+<span class="SH_COMMENT">/*&nbsp;&nbsp;tones_freq&nbsp;=&nbsp;new&nbsp;int[&nbsp;array_size&nbsp;]();&nbsp;//&nbsp;This&nbsp;does&nbsp;the&nbsp;same&nbsp;as&nbsp;above,&nbsp;but&nbsp;initializes&nbsp;all&nbsp;values&nbsp;in&nbsp;the&nbsp;array&nbsp;to&nbsp;0&nbsp;&nbsp;*/</span>
+}
+...
+test::some_function()
+{
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">for</span>(<span class="SH_RESERVED">int</span>&nbsp;idx&nbsp;=&nbsp;<span class="SH_BUILTIN">0</span>;&nbsp;idx&nbsp;&lt;&nbsp;array_size;&nbsp;idx++)&nbsp;<span class="SH_COMMENT">//&nbsp;Using&nbsp;a&nbsp;loop,&nbsp;fill&nbsp;up&nbsp;the&nbsp;array</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tones_freq[idx]&nbsp;=&nbsp;get_some_value();
+}
+&nbsp;
+<span class="SH_COMMENT">/*Make&nbsp;sure&nbsp;you&nbsp;properly&nbsp;release&nbsp;the&nbsp;array&nbsp;or&nbsp;memory&nbsp;leaks&nbsp;will&nbsp;build&nbsp;up*/</span>
+test::~test()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">if</span>(tones_freq)&nbsp;<span class="SH_COMMENT">//&nbsp;True&nbsp;if&nbsp;tones_freq&nbsp;is&nbsp;not&nbsp;a&nbsp;null&nbsp;pointer</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">delete</span>[]&nbsp;tones_freq;
+&nbsp;
+}
+</pre></td></tr></tbody></table></pre></div><p>...this is good for when you need an array in your class but don't need to use it right away (if at all) because it begins as null pointer.</p>
+<p><strong>If the size and values of the array are known, then use this...</strong></p>
+<div class="flashbox fcode"><h4 class="ftitle"> </h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br></div></td><td class="codify_screen"><pre><span class="SH_RESERVED">class</span>&nbsp;test
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">public</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">private</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">int</span>*&nbsp;tones_freq;&nbsp;<span class="SH_COMMENT">//&nbsp;Take&nbsp;off&nbsp;the&nbsp;[]&nbsp;brackets</span>
+};
+&nbsp;
+...
+&nbsp;
+test::test()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;tones_freq&nbsp;=&nbsp;<span class="SH_RESERVED">new</span>&nbsp;<span class="SH_RESERVED">int</span>[&nbsp;<span class="SH_BUILTIN">3</span>&nbsp;]&nbsp;{&nbsp;<span class="SH_BUILTIN">660</span>,&nbsp;<span class="SH_BUILTIN">660</span>,&nbsp;<span class="SH_BUILTIN">510</span>&nbsp;};&nbsp;<span class="SH_COMMENT">//&nbsp;The&nbsp;previously&nbsp;undefined&nbsp;pointer&nbsp;now&nbsp;points&nbsp;to&nbsp;an&nbsp;array&nbsp;of&nbsp;the&nbsp;defined&nbsp;3&nbsp;ints</span>
+}
+test::~test()
+{
+<span class="SH_RESERVED">if</span>(tones_freq)&nbsp;<span class="SH_COMMENT">//&nbsp;True&nbsp;if&nbsp;tones_freq&nbsp;is&nbsp;not&nbsp;a&nbsp;null&nbsp;pointer</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">delete</span>[]&nbsp;tones_freq;&nbsp;
+}
+</pre></td></tr></tbody></table></pre></div><p>Take a look at <a href="https://mbed.org/users/Fuzball/code/DynamicArray/">my dynamic array code</a> if you're looking for more example syntax.</p>
+<p>Hope that helps :)
+-Chris</p>
+<p></p>
+                                <div class="answer-actions">
+                                    <a class="a-showcomment" href="https://developer.mbed.org/questions/2495/How-to-declare-and-initialize-array-in-a/#" id="3046">Post a comment on this answer</a>
+                                    
+                                </div>
+                                <div class="comment-container">
+                                    
+                                    
+                                        
+                                            
+
+
+<div class="q-comment">
+    <a name="c9321"></a>
+    <a name="comment-9321"></a>
+    <a name="comment-None"></a>
+    <div class="inner">
+
+        <div class="post-container">
+            <span style="padding-left:20px;">
+
+               <div class="commentbody"> <p>The second code example is exactly what I'm looking for.
+However, I'm getting an syntax error when I try to compile it: <strong>Error: Expected a ";".</strong> 
+It says it expects a ";" between "[3]" and "{ 660, 660, 510 };"</p>
+
+                
+                <span class="commentinfo" style="float:right;"> posted by <span class="authortext"><a href="https://developer.mbed.org/users/Behaegel/">Jeroen Behaegel</a></span>
+                    
+                    <span class="updated"><abbr class="timeago" title="08 Feb 2014">08 Feb 2014</abbr></span>
+                    
+                    
+                </span>
+                </div>
+        </span></div>
+    </div>
+</div>
+
+                                        
+                                            
+
+
+<div class="q-comment">
+    <a name="c9336"></a>
+    <a name="comment-9336"></a>
+    <a name="comment-None"></a>
+    <div class="inner">
+
+        <div class="post-container">
+            <span style="padding-left:20px;">
+
+               <div class="commentbody"> <p>Doesn't this method create multiple copies of the array for multiple instances of the class? Also, isn't memory allocated in both flash and SRAM. For large arrays, this could eat up SRAM quickly.</p>
+
+                
+                <span class="commentinfo" style="float:right;"> posted by <span class="authortext"><a href="https://developer.mbed.org/users/davidsr9/">David G</a></span>
+                    
+                    <span class="updated"><abbr class="timeago" title="08 Feb 2014">08 Feb 2014</abbr></span>
+                    
+                    
+                </span>
+                </div>
+        </span></div>
+    </div>
+</div>
+
+                                        
+                                            
+
+
+<div class="q-comment">
+    <a name="c9341"></a>
+    <a name="comment-9341"></a>
+    <a name="comment-None"></a>
+    <div class="inner">
+
+        <div class="post-container">
+            <span style="padding-left:20px;">
+
+               <div class="commentbody"> <p>Hello again Jeroen,</p>
+<p>Sorry about that code - i'm mixing up my C with C++...
+Dynamic memory reserved with the 'new' operator uses an allocator which simply reserves memory then returns a pointer to the beginning address (e.g. there's no option to assign values while allocating memory). However, there's one very nasty work-around that I can think of off the top of my head, but it's not pretty. I'd recommend going with Erik's idea (he's always right!) and use a static since there's no point in creating an identical array each time you instantiate the class.</p>
+<p>That being said, I wouldn't hold it against you if you're only planning on instantiating the class once, not looking to delve head-first into C++, and simply just want your code to compile for test purposes. If that's the case, then there's no shame in trying this work-around:</p>
+<div class="flashbox fcode"><h4 class="ftitle"> </h4><pre class="mbed-code" offset="0"><table cellpadding="0" cellspacing="0" border="0" class="codify_table"><tbody><tr><td class="codify_numcol"><div class="codify_numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br></div></td><td class="codify_screen"><pre>test::test()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">int</span>&nbsp;tempArray[]&nbsp;=&nbsp;{<span class="SH_BUILTIN">660</span>,&nbsp;<span class="SH_BUILTIN">660</span>,&nbsp;<span class="SH_BUILTIN">510</span>};&nbsp;<span class="SH_COMMENT">//&nbsp;Allows&nbsp;you&nbsp;to&nbsp;use&nbsp;brackets&nbsp;instead&nbsp;of&nbsp;assigning&nbsp;each&nbsp;value</span>
+&nbsp;&nbsp;&nbsp;&nbsp;tones_freq&nbsp;=&nbsp;<span class="SH_RESERVED">new</span>&nbsp;<span class="SH_RESERVED">int</span>[<span class="SH_BUILTIN">3</span>];
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">for</span>(<span class="SH_RESERVED">int</span>&nbsp;idx&nbsp;=&nbsp;<span class="SH_BUILTIN">0</span>;&nbsp;idx&nbsp;&lt;&nbsp;<span class="SH_BUILTIN">3</span>;&nbsp;idx++)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tones_freq[idx]&nbsp;=&nbsp;tempArray[idx];&nbsp;<span class="SH_COMMENT">//&nbsp;Copies&nbsp;each&nbsp;value&nbsp;into&nbsp;the&nbsp;tones_freq&nbsp;array</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="SH_RESERVED">delete</span>[]&nbsp;tempArray;&nbsp;<span class="SH_COMMENT">//&nbsp;free's&nbsp;the&nbsp;memory&nbsp;used&nbsp;by&nbsp;tempArray</span>
+}
+</pre></td></tr></tbody></table></pre></div><p>This code would make any programmer cry, but it gets the job done with minimal confusion :)</p>
+<p>In the end, though, I highly suggest you try out the other solutions using statics.
+Cheers!</p>
+<p>-Chris</p>
+
+                
+                <span class="commentinfo" style="float:right;"> posted by <span class="authortext"><a href="https://developer.mbed.org/users/Fuzball/">Chris Yan</a></span>
+                    
+                    <span class="updated"><abbr class="timeago" title="08 Feb 2014">08 Feb 2014</abbr></span>
+                    
+                    
+                </span>
+                </div>
+        </span></div>
+    </div>
+</div>
+
+                                        
+                                            
+
+
+<div class="q-comment">
+    <a name="c9354"></a>
+    <a name="comment-9354"></a>
+    <a name="comment-None"></a>
+    <div class="inner">
+
+        <div class="post-container">
+            <span style="padding-left:20px;">
+
+               <div class="commentbody"> <p>Thanks for all the help!
+Erik's solution worked for me.</p>
+
+                
+                <span class="commentinfo" style="float:right;"> posted by <span class="authortext"><a href="https://developer.mbed.org/users/Behaegel/">Jeroen Behaegel</a></span>
+                    
+                    <span class="updated"><abbr class="timeago" title="09 Feb 2014">09 Feb 2014</abbr></span>
+                    
+                    
+                </span>
+                </div>
+        </span></div>
+    </div>
+</div>
+
+                                        
+                                    
+                                    <div id="a_3046" style="display:none;">
+                                        
+                                            <p>Please <a href="https://developer.mbed.org/account/login/?next=/questions/2495/How-to-declare-and-initialize-array-in-a/%23answer3046">login</a> to post comments.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <br>
+
+                    
+
+                    
+
+                    
+
+
+                    
+
+                    
+                        <p>To post an answer, please <a href="https://developer.mbed.org/account/login/?next=/questions/2495/How-to-declare-and-initialize-array-in-a/">login</a></p>
+                    
+                </div> 
+            </div>
+        
+    
+
+        </div>
+        
+        <div class="three columns sidebar ">
+            
+
+    <div class="panel radius qstats">
+        <h5 class="subheader">Info </h5>
+        <p><b>Asked </b><abbr title="Feb. 7, 2014, 6:34 p.m.">2&nbsp;years, 1&nbsp;month ago.</abbr></p>
+        <p><b>Updated </b>2&nbsp;years, 1&nbsp;month</p>
+    </div>
+
+    
+    
+        <div class="panel radius qstats">
+            <h5 class="subheader">Related Items </h5>
+            
+                <p>
+<img title="Notebook Page" class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC4SURBVCjPdZFbDsIgEEWnrsMm7oGGfZrohxvU+Iq1TyjU60Bf1pac4Yc5YS4ZAtGWBMk/drQBOVwJlZrWYkLhsB8UV9K0BUrPGy9cWbng2CtEEUmLGppPjRwpbixUKHBiZRS0p+ZGhvs4irNEvWD8heHpbsyDXznPhYFOyTjJc13olIqzZCHBouE0FRMUjA+s1gTjaRgVFpqRwC8mfoXPPEVPS7LbRaJL2y7bOifRCTEli3U7BMWgLzKlW/CuebZPAAAAAElFTkSuQmCC" pagespeed_url_hash="4207950569" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+
+	
+<a href="https://developer.mbed.org/users/andersrundgren/notebook/driving-mbed-from-java/">Driving MBED from Java</a>
+</p>
+            
+                <p>
+<img title="Forum post" class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAG/SURBVDjLjZK9T8JQFMVZTUyc3IyJg4mDi87+GyYu6qB/gcZdFxkkJM66qJMGSNRBxDzigJMRQ1jQ4EcQ+SgVKB+FtuL13EdJxNDq8Ev7Xu85797T51nwhqeAH5w6cAxWwDgReX7jwYfdaCIraroptB7NLlVQrOoiGEsL1G06GZyxuILicsMUH3VTlOqGKNUMUdTacj+j1Nng0NGAT2WxYosK1bbIVVoiW27J9V8G57WWKVSczMV5iK+Tudv1vVh5yXdlLQN+os4AFZss2Ob82CCgQmhYHSnmkzf2b6rIhTAaaT2aXZALIRdCLgRtkA1WfYG4iKcVYX52JIs7EYvFmJ8wGiEXQi6EXAhdyn2MxQaPcg68zIETTvzyLsPzWnwqixVbhFwI3RFykes+A9vkIBKX4jCoIxdCLrI4/0OcUXXK4/1dbbDBS088xGGCCzAJCsiF2lanT8xdKNhHXvRarLFBqmcwCrbAhL32+kP3lHguETKRsNlbqUFPeY2OoikW62DNM+jf2ibzQNN0g5ALC75AGiT59oIReQ+cDGyTB+TC4jaYGXiRXMTD3AFogVmnOjeDMRAC025duo7wH74BwZ8JlHrTPLcAAAAASUVORK5CYII=" pagespeed_url_hash="1028292019" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+
+	
+<a href="https://developer.mbed.org/forum/helloworld/topic/1605/">GraphicLCD library problem</a>
+</p>
+            
+                <p>
+<img title="Question" class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKkSURBVDjLpZPdT5JhGMb9W+BPaK3matVqndXWOOigA6fmJ9DUcrUMlrN0mNMsKTUznQpq6pyKAm8CIogmypcg8GIiX8rHRHjhVbPt6o01nMvZWge/k3vP9duuZ/edAyDnf/hjoCMP2Vr3gUDj3CdV6zT1xZ6iFDaKnLEkBFOmPfaZArWT5sw60iFP+BAbOzTcQSqDZzsNRyCNkcVoaGghzDlVQKylOHJrMrUZ2Yf52y6kc36IxpyoH1lHF7EBgyMKV4jCJ5U/1UVscU4IZOYEa3I1HtwI01hwxlDLhDoJD/wxGr5YGmOLAdRIrVCuhmD3JdA6SQabx12srGB0KSpc86ew4olDOGjH4x4z0gdHDD9+c4TaQQtq+k2Yt0egXYugTmoVZgV9cyHSxXTtJjZR3WNCVfcK/NE0ppYDUNu2QTMCtS0IbrsOrVMOWL27eNJtJLOCDoWXdgeTEEosqPxoBK/TwDzWY9rowy51gJ1dGr2zLpS2aVH5QQ+Hbw88sZ7OClrGXbQrkMTTAQu4HXqUv9eh7J0OSfo7tiIU+GItilpUuM/AF2tg98eR36Q+FryQ2kjbVhximQu8dgPKxPMoeTuH4tfqDIWvCBQ2KlDQKEe9dBlGTwR36+THFZg+QoUxAL0jgsoOQzYYS+wjskcjTzSToVAkA7Hqg4Spc6tm4vgT+eIFVvmb+eCSMwLlih/cNg0KmpRoGzdl+BXOb5jAsMYNjSWAm9VjwesPR1knFilPNMu510CkdPZtqK1BvJQsoaRZjqLGaTzv1UNp9EJl9uNqxefU5QdDnFNX+Y5Qxrn9bDLUR6zjqzsMizeWYdG5gy6ZDbk8aehiuYRz5jHdeDTKvlY1IrhSMUxe4g9SuVwpdaFsgDxf2i84V9zH/us1/is/AdevBaK9Tb3EAAAAAElFTkSuQmCC" pagespeed_url_hash="51907649" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+
+	
+<a href="https://developer.mbed.org/questions/1541/How-to-convert-struct-value-tofrom-char-/">How to convert struct value to/from char array?</a>
+</p>
+            
+                <p>
+<img title="Question" class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKkSURBVDjLpZPdT5JhGMb9W+BPaK3matVqndXWOOigA6fmJ9DUcrUMlrN0mNMsKTUznQpq6pyKAm8CIogmypcg8GIiX8rHRHjhVbPt6o01nMvZWge/k3vP9duuZ/edAyDnf/hjoCMP2Vr3gUDj3CdV6zT1xZ6iFDaKnLEkBFOmPfaZArWT5sw60iFP+BAbOzTcQSqDZzsNRyCNkcVoaGghzDlVQKylOHJrMrUZ2Yf52y6kc36IxpyoH1lHF7EBgyMKV4jCJ5U/1UVscU4IZOYEa3I1HtwI01hwxlDLhDoJD/wxGr5YGmOLAdRIrVCuhmD3JdA6SQabx12srGB0KSpc86ew4olDOGjH4x4z0gdHDD9+c4TaQQtq+k2Yt0egXYugTmoVZgV9cyHSxXTtJjZR3WNCVfcK/NE0ppYDUNu2QTMCtS0IbrsOrVMOWL27eNJtJLOCDoWXdgeTEEosqPxoBK/TwDzWY9rowy51gJ1dGr2zLpS2aVH5QQ+Hbw88sZ7OClrGXbQrkMTTAQu4HXqUv9eh7J0OSfo7tiIU+GItilpUuM/AF2tg98eR36Q+FryQ2kjbVhximQu8dgPKxPMoeTuH4tfqDIWvCBQ2KlDQKEe9dBlGTwR36+THFZg+QoUxAL0jgsoOQzYYS+wjskcjTzSToVAkA7Hqg4Spc6tm4vgT+eIFVvmb+eCSMwLlih/cNg0KmpRoGzdl+BXOb5jAsMYNjSWAm9VjwesPR1knFilPNMu510CkdPZtqK1BvJQsoaRZjqLGaTzv1UNp9EJl9uNqxefU5QdDnFNX+Y5Qxrn9bDLUR6zjqzsMizeWYdG5gy6ZDbk8aehiuYRz5jHdeDTKvlY1IrhSMUxe4g9SuVwpdaFsgDxf2i84V9zH/us1/is/AdevBaK9Tb3EAAAAAElFTkSuQmCC" pagespeed_url_hash="51907649" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+
+	
+<a href="https://developer.mbed.org/questions/1753/FunctionPointer/">FunctionPointer?</a>
+</p>
+            
+                <p>
+<img title="Question" class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKkSURBVDjLpZPdT5JhGMb9W+BPaK3matVqndXWOOigA6fmJ9DUcrUMlrN0mNMsKTUznQpq6pyKAm8CIogmypcg8GIiX8rHRHjhVbPt6o01nMvZWge/k3vP9duuZ/edAyDnf/hjoCMP2Vr3gUDj3CdV6zT1xZ6iFDaKnLEkBFOmPfaZArWT5sw60iFP+BAbOzTcQSqDZzsNRyCNkcVoaGghzDlVQKylOHJrMrUZ2Yf52y6kc36IxpyoH1lHF7EBgyMKV4jCJ5U/1UVscU4IZOYEa3I1HtwI01hwxlDLhDoJD/wxGr5YGmOLAdRIrVCuhmD3JdA6SQabx12srGB0KSpc86ew4olDOGjH4x4z0gdHDD9+c4TaQQtq+k2Yt0egXYugTmoVZgV9cyHSxXTtJjZR3WNCVfcK/NE0ppYDUNu2QTMCtS0IbrsOrVMOWL27eNJtJLOCDoWXdgeTEEosqPxoBK/TwDzWY9rowy51gJ1dGr2zLpS2aVH5QQ+Hbw88sZ7OClrGXbQrkMTTAQu4HXqUv9eh7J0OSfo7tiIU+GItilpUuM/AF2tg98eR36Q+FryQ2kjbVhximQu8dgPKxPMoeTuH4tfqDIWvCBQ2KlDQKEe9dBlGTwR36+THFZg+QoUxAL0jgsoOQzYYS+wjskcjTzSToVAkA7Hqg4Spc6tm4vgT+eIFVvmb+eCSMwLlih/cNg0KmpRoGzdl+BXOb5jAsMYNjSWAm9VjwesPR1knFilPNMu510CkdPZtqK1BvJQsoaRZjqLGaTzv1UNp9EJl9uNqxefU5QdDnFNX+Y5Qxrn9bDLUR6zjqzsMizeWYdG5gy6ZDbk8aehiuYRz5jHdeDTKvlY1IrhSMUxe4g9SuVwpdaFsgDxf2i84V9zH/us1/is/AdevBaK9Tb3EAAAAAElFTkSuQmCC" pagespeed_url_hash="51907649" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+
+	
+<a href="https://developer.mbed.org/questions/58598/Try-to-put-a-class-instance-into-a-union/">Try to put a class instance into a union - works with GCC but not with mbed</a>
+</p>
+            
+        </div>
+    
+
+    
+
+        <div class="panel radius">
+            <h5 class="subheader">Tags</h5>
+            <ul class="taglist">
+                
+                    <li>This question has no tags</li>
+                
+            </ul>
+        </div>
+        
+        <div class="panel radius follow-box">
+            <p>
+</p>
+        </div>
+
+        <div class="clear"></div>
+    
+        </div>
+    </div>
+    
+    
+    <div class="row footer ">
+        <div class="twelve columns">
+        <hr>
+        <ul>
+            <li>© mbed</li> 
+            <li><a href="https://developer.mbed.org/blog">blog</a></li>
+            <li><a href="https://developer.mbed.org/handbook/Jobs">we're hiring!</a></li>
+            <li><a href="https://developer.mbed.org/handbook/Help">support</a></li>
+            <li><a href="https://developer.mbed.org/handbook/Service-status">service status</a></li>
+            <li><a href="https://developer.mbed.org/privacy">privacy policy</a></li>
+            <li><a href="https://developer.mbed.org/terms">terms and conditions</a> </li>
+            <li class="last">Language: 
+             
+                    <a style="font-weight: bold;" href="https://developer.mbed.org/setlang?lang=en">en</a>
+             
+             <a style="font-weight: " href="https://developer.mbed.org/setlang?lang=ja">ja</a> 
+             <a style="font-weight: " href="https://developer.mbed.org/setlang?lang=es">es</a> 
+             <a style="font-weight: " href="https://developer.mbed.org/setlang?lang=de">de</a>
+             </li> 
+            </ul>
+       </div>
+
+	
+	</div>
+    <div id="flag-content" class="reveal-modal small">
+        <h2>Report Content</h2>
+        <a class="close-reveal-modal">×</a>
+        <form action="" method="post" id="flag-content-form">
+            <input type="hidden" name="csrfmiddlewaretoken" value="1GLVtHDyoAXjiOi3l4QuOF2jkcEEJuSD">
+            <ul>
+                <li>
+                <label for="id_reason_1">
+                    <input id="id_reason_1" name="reason" type="radio" value="1">
+                    Spam
+                </label>
+                </li>
+                <li>
+                <label for="id_reason_2">
+                    <input id="id_reason_2" name="reason" type="radio" value="2">
+                    Inappropriate
+                </label>
+                </li>
+            </ul>
+            <a class="button radius secondary cancel-flag">Cancel</a>
+            <input type="submit" value="Report" class="button radius">
+        </form>
+    </div>
+
+
+
+<script type="text/javascript">var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script src="./How to declare and initialize array in a class_ - Question _ mbed_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">try{var pageTracker=_gat._getTracker("UA-1447836-8");pageTracker._setCustomVar(1,'User Type','Guest',2);pageTracker._trackPageview();}catch(err){}</script>
+
+
+
+
+
+</body></html>
